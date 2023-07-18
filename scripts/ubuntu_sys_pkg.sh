@@ -11,3 +11,6 @@ function apt_install() {
         apt-get install -y --no-install-recommends "$@"
     fi
 }
+
+apt_install \
+  git
