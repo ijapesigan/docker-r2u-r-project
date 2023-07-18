@@ -8,7 +8,7 @@ rm -rf /tmp/downloaded_packages
 
 ## Strip binary installed libraries from RSPM
 ## https://github.com/rocker-org/rocker-versioned2/issues/340
-strip /usr/local/lib/R/site-library/*/libs/*.so
+## strip /usr/local/lib/R/site-library/*/libs/*.so
 
 # Installation information
 echo -e "Session information...\n"
