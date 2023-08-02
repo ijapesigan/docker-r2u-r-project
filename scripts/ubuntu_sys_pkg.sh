@@ -14,3 +14,6 @@ function apt_install() {
 
 apt_install \
   git
+
+apt_install \
+  clang-format
