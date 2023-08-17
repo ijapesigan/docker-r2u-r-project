@@ -16,4 +16,7 @@ apt_install \
   git
 
 apt_install \
+  git-lfs
+
+apt_install \
   clang-format
