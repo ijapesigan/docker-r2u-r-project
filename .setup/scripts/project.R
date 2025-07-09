@@ -17,6 +17,8 @@
 
 project <- "docker-r2u-r-project"
 
+rproject_ver <- NULL
+
 pkg_cran <- c()
 
 pkg_github <- c()
