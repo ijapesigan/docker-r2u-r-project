@@ -1,0 +1,5 @@
+# System packages: one per line (install-apt.sh).
+
+git
+git-lfs
+clang-format

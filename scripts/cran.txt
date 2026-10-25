@@ -1,0 +1,4 @@
+# CRAN packages wanted, one per line, never their dependencies
+# (install-cran.sh; r2u binaries through bspm).
+
+remotes

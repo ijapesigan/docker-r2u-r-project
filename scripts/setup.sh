@@ -13,8 +13,10 @@ else
     echo "GITHUB_PAT NOT set"
 fi
 
-bash ubuntu_sys_pkg.sh
-bash ubuntu_cran_pkg.sh
-bash github_pkg.sh
+
+bash install-apt.sh
+bash install-cran.sh
+bash install-github.sh
 bash custom.sh
+bash check.sh
 bash post.sh

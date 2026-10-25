@@ -1,54 +1,69 @@
-ijapesigan/r2u-r-project
-================
-Ivan Jacob Agaloos Pesigan
-2026-08-29
 
-<!-- README.md is generated from .setup/readme/README.Rmd. Please edit that file -->
+<!-- README.md is generated from .setup/readme/README.Rmd, which rProject's
+docker template writes. Edit .setup/readme/description.md, scripts/cran.txt,
+scripts/github.txt, or .setup/scripts/project.R instead. -->
+
+# ijapesigan/r2u-r-project
 
 <!-- badges: start -->
 
-[![Make
-Project](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/make.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/make.yml)
+[![Docker Build and Push r2u-r-project \[multi\]
+(Daily)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-build-push-daily-multi-r2u-r-project.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-build-push-daily-multi-r2u-r-project.yml)
 [![Docker Build and Push
 \[multi\]](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-build-push-multi.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-build-push-multi.yml)
-[![Docker and Apptainer Build and Push \[amd64/arm64\]
-(Weekly)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-apptainer-build-push-weekly-amd64-arm64.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-apptainer-build-push-weekly-amd64-arm64.yml)
-[![Docker Build and Push \[amd64/arm64\]
-(Daily)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-build-push-daily-rocker.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-build-push-daily-rocker.yml)
+[![Make
+Project](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/make.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/make.yml)
+[![Non-ASCII
+Check](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/non-ascii-check.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/non-ascii-check.yml)
 [![Shell
 Check](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/shellcheck.yml)
 <!-- badges: end -->
 
 ## Description
 
-Docker and Apptainer/Singularity containers for `R` projects based on
-[r2u](https://github.com/eddelbuettel/r2u/).
+A minimal R image for projects based on
+[r2u](https://github.com/eddelbuettel/r2u/) (CRAN packages as Ubuntu
+binaries), with [rProject](https://github.com/ijapesigan/rProject).
 
-## GitHub Actions
+Based on `rocker/r2u:24.04`; built for linux/amd64 and linux/arm64.
+Source: <https://github.com/ijapesigan/docker-r2u-r-project>.
 
-The `Docker and Apptainer Build and Push [amd64]` GitHub actions
-workflow performs the following:
+## Use
 
-- Builds the Docker image specified by the `Dockerfile`.
-- Pushes the image to
-  [DockerHub](https://hub.docker.com/r/ijapesigan/r2u-r-project) using
-  the tags `latest` and `date and time of build (YEAR-MM-DD-HHMMSSMS)`.
-- Builds the Singularity Image File (SIF) using Apptainer based on the
-  Docker Hub image from the previous step.
-- Creates a GitHub release named `r2u-r-project-YEAR-MM-DD-HHMMSSMS`.
-  Note that `r2u-r-project-YEAR-MM-DD-HHMMSSMS.zip` contains the SIF.
-
-## Docker Shell
+Docker (Docker Hub or the GitHub Container Registry):
 
 ``` bash
 docker run -it ijapesigan/r2u-r-project
+docker run -it ghcr.io/ijapesigan/r2u-r-project
 ```
 
-## Apptainer Shell
-
-Download and unzip `r2u-r-project-YEAR-MM-DD-HHMMSSMS.zip` from the
-GitHub release to extract `r2u-r-project-YEAR-MM-DD-HHMMSSMS.sif`.
+Apptainer:
 
 ``` bash
-apptainer shell r2u-r-project-YEAR-MM-DD-HHMMSSMS.sif
+apptainer pull r2u-r-project.sif docker://ijapesigan/r2u-r-project
+apptainer shell r2u-r-project.sif
 ```
+
+## Contents
+
+R packages from CRAN (`scripts/cran.txt`), with their dependencies:
+
+remotes
+
+R packages from GitHub (`scripts/github.txt`), installed after CRAN:
+
+- [ijapesigan/rProject](https://github.com/ijapesigan/rProject)
+
+## Builds
+
+- Docker Build and Push r2u-r-project \[multi\] (Daily)
+  (`docker-build-push-daily-multi-r2u-r-project.yml`): daily at 00:00
+  UTC, when the base image is rebuilt
+- Docker Build and Push \[multi\] (`docker-build-push-multi.yml`): after
+  Make Project
+- Make Project (`make.yml`): on push
+- Non-ASCII Check (`non-ascii-check.yml`): after Make Project
+- Shell Check (`shellcheck.yml`): after Make Project
+
+The images are pushed to Docker Hub and the GitHub Container Registry as
+`ijapesigan/r2u-r-project:latest`.
