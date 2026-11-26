@@ -6,17 +6,11 @@ scripts/github.txt, or .setup/scripts/project.R instead. -->
 # ijapesigan/r2u-r-project
 
 <!-- badges: start -->
-
-[![Docker Build and Push r2u-r-project \[multi\]
-(Daily)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-build-push-daily-multi-r2u-r-project.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-build-push-daily-multi-r2u-r-project.yml)
-[![Docker Build and Push
-\[multi\]](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-build-push-multi.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-build-push-multi.yml)
-[![Make
-Project](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/make.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/make.yml)
-[![Non-ASCII
-Check](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/non-ascii-check.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/non-ascii-check.yml)
-[![Shell
-Check](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/shellcheck.yml)
+[![Make Project](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/make.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/make.yml)
+[![Docker Build and Push r2u-r-project [multi] (Daily)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-build-push-daily-multi-r2u-r-project.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-build-push-daily-multi-r2u-r-project.yml)
+[![Docker Build and Push [multi]](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-build-push-multi.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/docker-build-push-multi.yml)
+[![Non-ASCII Check](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/non-ascii-check.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/non-ascii-check.yml)
+[![Shell Check](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/shellcheck.yml)
 <!-- badges: end -->
 
 ## Description
@@ -43,16 +37,6 @@ Apptainer:
 apptainer pull r2u-r-project.sif docker://ijapesigan/r2u-r-project
 apptainer shell r2u-r-project.sif
 ```
-
-## Contents
-
-R packages from CRAN (`scripts/cran.txt`), with their dependencies:
-
-remotes
-
-R packages from GitHub (`scripts/github.txt`), installed after CRAN:
-
-- [ijapesigan/rProject](https://github.com/ijapesigan/rProject)
 
 ## Builds
 

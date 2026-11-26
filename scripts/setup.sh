@@ -13,9 +13,10 @@ else
     echo "GITHUB_PAT NOT set"
 fi
 
-
 bash install-apt.sh
 bash install-cran.sh
+bash rproject_sys.sh
+bash rproject.sh
 bash install-github.sh
 bash custom.sh
 bash check.sh

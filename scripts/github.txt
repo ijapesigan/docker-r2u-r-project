@@ -1,4 +1,4 @@
 # GitHub packages: owner/repo[@ref], one per line (install-github.sh,
 # after CRAN).
 
-ijapesigan/rProject
+# (none: rproject.sh installs ijapesigan/rProject)
