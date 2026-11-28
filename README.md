@@ -5,7 +5,7 @@ scripts/github.txt, or .setup/scripts/project.R instead. -->
 
 # ijapesigan/r2u-r-project
 
-Updated 2026-11-26 20:38:57 UTC.
+Updated 2026-11-28 04:29:34 UTC.
 
 <!-- badges: start -->
 [![Make Project](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/make.yml/badge.svg)](https://github.com/ijapesigan/docker-r2u-r-project/actions/workflows/make.yml)
